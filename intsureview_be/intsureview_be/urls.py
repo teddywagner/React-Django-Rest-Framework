@@ -18,4 +18,7 @@ router.register(r"groups", views.GroupViewSet)
 urlpatterns = [
     path("", include(router.urls)),
     path("api-auth/", include("rest_framework.urls", namespace="rest_framework")),
+
+    # I added a path to the form_list view
+    path("forms/", views.form_list),
 ]

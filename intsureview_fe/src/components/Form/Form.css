@@ -1,0 +1,59 @@
+/* Remove unnecessary styles */
+h2 {
+  margin-top: 0;
+}
+
+/* Styling the form 
+   Forms should be left aligned, not centered.
+*/
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  width: 20rem;
+  height: fit-content;
+}
+
+/* Styling the form fields */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    font-size:medium;
+    margin-top: .5rem;
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    align-items: center !important;
+}
+
+input {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 100%;
+}
+
+/* Make the inputs border red and text red if the input becomes invalid */
+.invalid {
+  border: 1px solid red;
+  color: red;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid black;
+  width: 4rem;
+}
+
+/* Error message styling */
+.error {
+  color: red;
+  font-size: small;
+}
