@@ -52,7 +52,7 @@ export const Form = (props) => {
 
     if (fields) {
       try {
-        const res = await axios.post(apiURL, fields);
+        await axios.post(apiURL, fields);
         props.setSubmitted(true);
       } catch (e) {
         setErrorMessage(`Something went wrong. Errpr: ${e.message}`);
