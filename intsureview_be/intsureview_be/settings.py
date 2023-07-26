@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "rest_framework",
     "intsureview_be.apps.api",
+    # From my research, corsheaders is the best package to use to allow cross origin communication between front end and back end
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -49,6 +51,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
 ]
 
 ROOT_URLCONF = "intsureview_be.urls"
@@ -75,6 +78,12 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 10,
 }
+
+# White list the 3000 port, i.e. front end port, to allow communication between front end and back end
+# Grouped it near the top of the file and Rest Framework settings
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:3000",
+)
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases

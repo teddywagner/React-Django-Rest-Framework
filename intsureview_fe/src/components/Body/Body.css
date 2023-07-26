@@ -1,0 +1,10 @@
+/* Provide a margin for the left and right edges of the page.
+   I think it cleans up the page if it had more content.
+   Also, add padding at the bottom to leave room for the footer.
+*/
+.App-body {
+    margin: 0% 10% 0% 10%;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+}
